@@ -1,0 +1,40 @@
+remove duplicates from an array, do not use filter/map/reduce/set function, once problem is solved use filter, w/w/o recursion
+
+array = [7, 9, "hi", 12, "hi", 7, 53]
+return = [7, 9, "hi", 12, 53]
+
+const deDuper = array => {
+	let deDupedArray = []
+  for (let i = 0; i < array.length; i++) {
+  	if (i === array.indexOf(array[i])) {
+    	duDupedArray.push(array[i])
+    }
+  }
+  return deDupedArray;
+}
+
+const deDupedArray = deDuper(array)
+
+[7, 9, "hi", 12, 53]
+
+const deDuperRecursive = (array, counter=0, deDupedArray = []) => {
+	if (counter === array.length) {
+  	return deDupedArray;
+  } else if (!deDupedArray.includes(array[counter]) {
+  	deDupedArray(array[counter])
+    return deDuper(array, counter+=1, deDupedArray)
+  } else if (deDupedArray.includes(array[counter]) {
+  	return deDuper(array, counter+=1, deDupedArray)
+  }
+}
+
+counter = 7
+
+[7, 9, "hi", 12, 53]
+
+const deDuperFilter = array => {
+	const deDupedArray = array.filter((element, index)) => {
+  	return index === array.indexOf(array[index])
+  }
+  return deDupedArray
+}
